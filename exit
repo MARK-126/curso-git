@@ -1,0 +1,179 @@
+[33mcommit 203309867a83a1f37f7985b9c0f5bcf67c24f314[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31mcurso-git/main[m[33m)[m
+Author: Marcos Rio <marcosrio.26@gmail.com>
+Date:   Sat May 14 20:20:22 2022 -0300
+
+    probando otra puta vez
+
+[1mdiff --git a/index.html b/index.html[m
+[1mindex d11be23..3173d6d 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -30,5 +30,7 @@[m
+ [m
+     <script src="scripts/main.js"></script>[m
+ [m
+[32m+[m[32m    <main></main>[m
+[32m+[m
+ </body>[m
+ </html>[m
+\ No newline at end of file[m
+
+[33mcommit acea46ae3e14e278b5acb628c230d28aaa07c028[m
+Author: Marcos Rio <marcosrio.26@gmail.com>
+Date:   Sat May 14 20:14:31 2022 -0300
+
+    agregue un archivo
+
+[1mdiff --git a/archivo b/archivo[m
+[1mnew file mode 100644[m
+[1mindex 0000000..68e5939[m
+[1m--- /dev/null[m
+[1m+++ b/archivo[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mno lo se estoy porbamdp[m
+\ No newline at end of file[m
+
+[33mcommit 9c42b6e7650dcf5b5f4b89d000e083f77b37e642[m
+Author: Marcos Rio <95100475+MARK-126@users.noreply.github.com>
+Date:   Sat May 14 20:06:28 2022 -0300
+
+    Add files via upload
+
+[1mdiff --git a/imagenes/mozilla2.png b/imagenes/mozilla2.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0d10169[m
+Binary files /dev/null and b/imagenes/mozilla2.png differ
+[1mdiff --git a/imagenes/pngwing.com.png b/imagenes/pngwing.com.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..310df68[m
+Binary files /dev/null and b/imagenes/pngwing.com.png differ
+[1mdiff --git a/index.html b/index.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d11be23[m
+[1m--- /dev/null[m
+[1m+++ b/index.html[m
+[36m@@ -0,0 +1,34 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Practica HTML</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles/style.css" type="text/css">[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet" type="text/css">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <h1>Pagina de prueba de HTML</h1>[m
+[32m+[m[32m    <img src="imagenes/pngwing.com.png" alt="Mi imagen de prueba">[m
+[32m+[m
+[32m+[m[32m    <p>En Mozilla, somos una comunidad de</p>[m
+[32m+[m
+[32m+[m[32m    <ul>[m
+[32m+[m[32m        <li>tecnólogos</li>[m
+[32m+[m[32m        <li>pensadores</li>[m
+[32m+[m[32m        <li>constructores</li>[m
+[32m+[m[32m    </ul>[m
+[32m+[m
+[32m+[m[32m    <p>trabajando juntos para hacer de Internet un lugar saludable y accesible.[m
+[32m+[m[32m    <br></br>[m
+[32m+[m
+[32m+[m[32m    Puedes leer el <a href="https://www.mozilla.org/es-AR/about/manifesto/">Manifiesto Mozilla</a> desde aqui.[m
+[32m+[m[32m    </p>[m
+[32m+[m
+[32m+[m[32m    <button>Cambiar de usuario</button>[m
+[32m+[m
+[32m+[m[32m    <script src="scripts/main.js"></script>[m
+[32m+[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/scripts/main.js b/scripts/main.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0e22585[m
+[1m--- /dev/null[m
+[1m+++ b/scripts/main.js[m
+[36m@@ -0,0 +1,43 @@[m
+[32m+[m
+[32m+[m[32m/*----> CAMBIO DE IMAGEN CON ONCLICK <---- */[m
+[32m+[m
+[32m+[m[32mlet miImage = document.querySelector('img');[m
+[32m+[m[32mmiImage.onclick = function() {[m
+[32m+[m[32m    let miSrc = miImage.getAttribute('src');[m
+[32m+[m[32m    if(miSrc === 'imagenes/pngwing.com.png') {[m
+[32m+[m[32m        miImage.setAttribute('src', 'imagenes/mozilla2.png');[m[41m            [m
+[32m+[m[32m    }else{[m
+[32m+[m[32m        miImage.setAttribute('src', 'imagenes/pngwing.com.png')[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* ----> MENSAJE PERSONALIZADO <----*/[m
+[32m+[m
+[32m+[m[32m// SE VA A UTILIZAR EL WEB STORAGE API[m
+[32m+[m
+[32m+[m[32mlet miBoton = document.querySelector('button');[m
+[32m+[m
+[32m+[m[32mlet miTitulo = document.querySelector('h1');[m
+[32m+[m
+[32m+[m[32mfunction estableceNombreUsuario() {[m
+[32m+[m[32m    let miNombre = prompt('Introduzca su nombre.');[m
+[32m+[m[32m    if(!miNombre) {[m
+[32m+[m[32m      estableceNombreUsuario();[m
+[32m+[m[32m    } else {[m
+[32m+[m[32m      localStorage.setItem('nombre', miNombre);[m
+[32m+[m[32m      miTitulo.innerHTML = 'Mozilla is genial, ' + miNombre;[m
+[32m+[m[32m    }[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32mif(!localStorage.getItem('nombre')) {[m
+[32m+[m[32m      estableceNombreUsuario();[m
+[32m+[m[32m}else{[m
+[32m+[m[32m      let nombreAlmacenado = localStorage.getItem('nombre');[m
+[32m+[m[32m      miTitulo.innerHTML = 'Mozilla es genial, ' + nombreAlmacenado;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mmiBoton.onclick = function() {[m
+[32m+[m[32m    estableceNombreUsuario();[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[1mdiff --git a/styles/style.css b/styles/style.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a5f36b9[m
+[1m--- /dev/null[m
+[1m+++ b/styles/style.css[m
+[36m@@ -0,0 +1,33 @@[m
+[32m+[m[32mhtml{[m
+[32m+[m[32m    font-size: 10px;[m
+[32m+[m[32m    font-family: "Open Sans", sans-serif;[m
+[32m+[m[32m    background-color: #00539F;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mbody{[m
+[32m+[m[32m    padding: 0;[m
+[32m+[m[32m    width: 600px;[m
+[32m+[m[32m    margin: 0 auto;[m
+[32m+[m[32m    background-color: #FF9500;[m
+[32m+[m[32m    padding: 0 20px 20px 20px;[m
+[32m+[m[32m    border: 5px solid black;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mh1{[m
+[32m+[m[32m    font-size: 60px;[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    margin: 0;[m
+[32m+[m[32m    color: #00539f;[m
+[32m+[m[32m    text-shadow: 3px 3px 10px black;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mp, li {[m
+[32m+[m[32m    font-size: 16px;[m
+[32m+[m[32m    line-height: 2;[m
+[32m+[m[32m    letter-spacing: 1px;[m
+[32m+[m[32m}[m
+[32m+[m[32mimg {[m
+[32m+[m[32m    display: block;[m
+[32m+[m[32m    width: 300px;[m
+[32m+[m[32m    margin: 0 auto;[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
